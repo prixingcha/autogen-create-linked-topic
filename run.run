@@ -1,0 +1,17 @@
+===================================================
+** how to run this application**
+** this will run the autogen in ollama local llm **
+===================================================
+1) 
+    pi -U "pyautogen[retrievechat]" chromadb
+
+2) 
+    export AUTOGEN_USE_DOCKER=False
+    export OPENAI_API_KEY=sk-**************************** #
+3) 
+    ollama run codellama:7b-instruct
+4) 
+    python app.py
+
+
+== The End ==
