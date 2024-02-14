@@ -3,9 +3,15 @@ import chromadb
 from autogen import AssistantAgent
 from autogen.agentchat.contrib.retrieve_user_proxy_agent import RetrieveUserProxyAgent
 import gradio as gr
+import os 
+from dotenv import load_dotenv
 
 
 def autogen_chat(pdf_path, query):
+    load_dotenv()
+    AUTOGEN_USE_DOCKER = os.getenv('AUTOGEN_USE_DOCKER')
+    OPENAI_API_KEY = os.getenv('OPENAI_API_KEY')
+    
     if not pdf_path:
         return "pdf path is required"
     config_list = [
