@@ -3,7 +3,7 @@
 ** this will run the autogen in ollama local llm **
 ===================================================
 1) 
-    pi -U "pyautogen[retrievechat]" chromadb
+    pi -U "pyautogen[retrievechat]" chromadb sentence_transformers gradio autogen
 
 2) 
     export AUTOGEN_USE_DOCKER=False
